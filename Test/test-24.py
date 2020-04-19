@@ -15,4 +15,20 @@
 class Solution:
     # 返回二维列表，内部每个列表表示找到的路径
     def FindPath(self, root, expectNumber):
-# write code here
+
+        def dfs(root):
+            if not root:
+                return ListAll
+            list.append(root.val)
+            if sum(list) == expectNumber and not root.left and not root.right:
+                ListAll.append(list[:])
+            else:
+                dfs(root.left)
+                dfs(root.right)
+            list.pop()
+
+        ListAll = []
+        list = []
+        dfs(root)
+        return ListAll
+    # write code here
