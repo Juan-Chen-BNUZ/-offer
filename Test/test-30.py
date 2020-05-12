@@ -12,12 +12,13 @@ class Solution:
     def FindGreatestSumOfSubArray(self, array):
         maxnum = array[0]
         res = array[0]
-        for i in range(1,len(array)):
-            maxnum = max(maxnum+array[i],array[i])
-            res = max(maxnum,res)
+        for i in range(1, len(array)):
+            maxnum = max(maxnum + array[i], array[i])
+            res = max(maxnum, res)
         return res
 
-if __name__ == '__main__'
-    A = [2,8,1,5,9]
+
+if __name__ == '__main__':
+    A = [2, 8, 1, 5, 9]
     print(Solution().FindGreatestSumOfSubArray(A))
 # write code here
