@@ -19,6 +19,6 @@ class Solution:
 
 
 if __name__ == '__main__':
-    A = [2, 8, 1, 5, 9]
+    A = [6, -3, -2, 7, -15,1,2,2]
     print(Solution().FindGreatestSumOfSubArray(A))
 # write code here
