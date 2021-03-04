@@ -15,9 +15,10 @@ class Solution:
     def Mirror(self, root):
         if not root:
             return root
-        node = root.left
-        root.left = root.right
-        root.right = node
+        # node = root.left
+        # root.left = root.right
+        # root.right = node
+        root.left, root.right = root.right, root.left
         self.Mirror(root.left)
         self.Mirror(root.right)
         return root

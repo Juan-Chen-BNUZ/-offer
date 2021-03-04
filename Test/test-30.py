@@ -17,8 +17,15 @@ class Solution:
             res = max(maxnum, res)
         return res
 
+        # maxnum = array[0]
+        # res = array[0]
+        # for i in range(1, len(array)):
+        #     maxnum = max(array[i], maxnum + array[i])
+        #     res = max(maxnum, res)
+        # return res
+
 
 if __name__ == '__main__':
-    A = [6, -3, -2, 7, -15,1,2,2]
+    A = [6, -3, -2, 7, -15, 1, 2, 2]
     print(Solution().FindGreatestSumOfSubArray(A))
 # write code here

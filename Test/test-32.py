@@ -26,7 +26,7 @@ class Solution:
         lens = len(numbers)
         if lens == 0:
             return ""
-        tmpNumbers = sorted(numbers, key = functools.cmp_to_key(self.compare))
+        tmpNumbers = sorted(numbers, key = functools.cmp_to_key(self.compare))s
         print(tmpNumbers)
         return int(''.join(str(x) for x in tmpNumbers))
 

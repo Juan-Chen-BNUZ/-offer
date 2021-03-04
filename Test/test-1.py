@@ -11,14 +11,29 @@
 class Solution:
     # array 二维列表
     def Find(self, target, array):
+        #         if array == []:
+        #             return False
+        #         num_row = len(array)
+        #         num_col = len(array[0])
+        #         for i in range(num_row):
+        #             for j in range(num_col):
+        #                 if target == array[i][j]:
+        #                     return True
+        #                 else:
+        #                     continue
+        # # write code here
         if array == []:
             return False
-        num_row = len(array)
-        num_col = len(array[0])
-        for i in range(num_row):
-            for j in range(num_col):
-                if target == array[i][j]:
-                    return True
-                else:
-                    continue
-# write code here
+        row = 0
+        col = len(array[0]) - 1
+        while row <= len(array) - 1 and col >= 0:
+            if target > array[row][col]:
+                row = row +1
+            elif target < array[row][col]:
+                col = col -1
+            elif target == array[row][col]:
+                return True
+        return False
+
+if __name__ == '__main__':
+    print(Solution().Find())

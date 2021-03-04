@@ -17,4 +17,5 @@ class Solution:
 
         return res[number]
 
+
 # write code here
